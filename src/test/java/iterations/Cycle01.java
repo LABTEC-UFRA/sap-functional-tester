@@ -135,9 +135,9 @@ public class Cycle01 extends BaseTest {
 
         super.homePage.clickEntryButton();
 
-        String currentUrl = getCurrentUrl();
+        boolean isDisplayedPasswordField = loginPage.isVisiblePasswordField();
 
-        assertThat(currentUrl, is(url));
+        assertThat(isDisplayedPasswordField, is(true));
 
     }
 
@@ -175,7 +175,9 @@ public class Cycle01 extends BaseTest {
 
         accessSapMainArea_CT1014();
 
-        boolean isVisible = super.mainPage.isVisibleInformationContent();
+        Thread.sleep(1000);
+
+        boolean isVisible = super.mainPage.isVisibleHomePageInformationContent();
 
         assertThat(isVisible, is(true));
 
@@ -390,7 +392,7 @@ public class Cycle01 extends BaseTest {
     public void verifyInformativeText_CT_1031() throws InterruptedException {
         accessFormFromSapMainArea_CT1016();
 
-        boolean isDisplayed = super.mainPage.isDisplayedInformativeText();
+        boolean isDisplayed = super.mainPage.isDisplayedFormsInformativeText();
 
         assertThat(isDisplayed, is(true));
 

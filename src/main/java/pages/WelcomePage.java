@@ -14,7 +14,6 @@ public class WelcomePage {
     private final By dropDownMenu = By.id("headlessui-menu-button-:r0:");
     private final By manageProfileButton = By.cssSelector("#headlessui-menu-item-\\3Ar4\\3A > .ml-3");
     private final By quitButton = By.cssSelector("#headlessui-menu-item-\\3Ar5\\3A > .ml-3");
-
     private final By seeMoreButton = By.cssSelector(".ml-10:nth-child(2) .flex > .mr-3");
 
     public WelcomePage(WebDriver driver) {
